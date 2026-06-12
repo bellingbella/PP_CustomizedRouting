@@ -1,0 +1,41 @@
+.cssBtn {
+    background-color: var(--button-color);
+    color: var(--font-color);
+    padding: var(--global-padding-index);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.cssBtn:hover {
+    animation-name: animation-of-hovered-cssBtn;
+    animation-duration: var(--global-duration-of-animation);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-of-hovered-cssBtn {
+    0% {
+        background-color: var(--button-color);
+    }
+
+    100% {
+        background-color: var(--hovered-button-color);
+    }
+}
+
+
+.cssBtn:not(:hover) {
+    animation-name: animation-of-unhovered-cssBtn;
+    animation-duration: var(--global-duration-of-animation);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-of-unhovered-cssBtn {
+    0% {
+        background-color: var(--hovered-button-color);
+    }
+
+    100% {
+        background-color: var(--button-color);
+    }
+}
