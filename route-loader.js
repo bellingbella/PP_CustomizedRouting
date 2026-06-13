@@ -1,11 +1,12 @@
 (function () {
-    const url = new URL(window.location.href);
-    if (url.pathname == '\\') changeRoute(pageManager.getRootRoute());
+    const url = new URL(window.location.href); 
+    if (url.pathname == '/') changeRoute(pageManager.getRootRoute());
     else changeRoute(url.pathname.slice(
-        0,
+        1,
         url.pathname.length
     ))
 })();
+
 
 
 function loadContent(content) {
